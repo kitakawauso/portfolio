@@ -6,142 +6,164 @@
   </head>
 
   <body>
-    <div class="container">
-      <header></header>
+    <header class="header">
+      <div class="header-inner">
+        <ul class="header-list">
+          <li class="header-item">
+            <a href="">WORKS</a>
+          </li>
+          <li class="header-item">
+            <a href="">ABOUT</a>
+          </li>
+          <li class="header-item">
+            <a href="">Github</a>
+          </li>
+        </ul>
+      </div>
+    </header>
 
-      <div class="top">
+    <div class="top-wrapper">
+      <div class="top-img">
         <!-- <img src="sample.jpg" alt="サンプル画像" width="" height=""> -->
       </div>
+    </div>
 
-      <div class="about">
-        <h1>ABOUT</h1>
+    <div id="suisho_about" class="section">
+      <h1>Abstract</h1>
 
-        <div class="lead">
+      <div class="lead">
+        <p>
+          競技かるたの払いの動作を可視化するためのWebシステム。
+          「競技かるたの払いの動作の可視化」という題で大学4年次から卒業研究として制作開始。
+          競技者の競技能力の向上が目的である。
+          機械学習を用いて姿勢推定を行い、得られた情報を可視化することで
+          選手の取りについて分析を行う。
+          複数人の情報を用いて比較を行うことで、より詳細な分析が行える。
+        </p>
+      </div>
+    </div>
+
+    <div id="suisho_abstract" class="section">
+      <div class="movie-box flex-box">
+        <div class="movie-wrapper"></div>
+        <div class="movie-text">
           <p>
-            競技かるたの払いの動作を可視化するためのWebシステム。<br />
-            「競技かるたの払いの動作の可視化」という題で大学4年次から卒業研究として制作開始。<br />
-            競技者の競技能力の向上が目的である。<br />
-            機械学習を用いて姿勢推定を行い、得られた情報を可視化することで<br />
-            選手の取りについて分析を行う。<br />
-            複数人の情報を用いて比較を行うことで、より詳細な分析が行える。<br />
+            札を払っている様子を撮影し、 姿勢推定をするためのシステムの画面。
+            機械学習による姿勢推定は、 特別な撮影用機械を用いなくとも
+            分析を行えることが強みである。 Mediapipeを用いており、
+            指先も含めた33箇所の部位の座標を 細かく測定できる。
           </p>
-        </div>
-
-        <div id="suisho_abstract" class="section">
-          <div class="movie-wrapper"></div>
-          <div class="movie-text">
-            <p>
-              札を払っている様子を撮影し、<br />
-              姿勢推定をするためのシステムの画面。<br />
-              機械学習による姿勢推定は、
-              <br />特別な撮影用機械を用いなくとも<br />
-              分析を行えることが強みである。 <br />
-              Mediapipeを用いており、<br />
-              指先も含めた33箇所の部位の座標を<br />
-              細かく測定できる。<br />
-            </p>
-          </div>
-
-          <div class="movie-wrapper"></div>
-          <div class="movie-text">
-            <p>
-              前述のシステムで得られた情報を<br />
-              可視化するシステムの画面。<br />
-              Javascriptを用いて描画している。<br />
-              三次元ボーン表示を行うことで、<br />
-              通常は見られない任意の角度で<br />
-              払いの様子を観察できる。<br />
-              グラフ表示でも比較をすることで、<br />
-              より詳細な分析ができる。<br />
-            </p>
-          </div>
-        </div>
-
-        <div id="suisho_ux" class="section">
-          <div id="suisho_persona" class="section-box">
-            <h2>user persona</h2>
-            <!-- <img src="sample.jpg" alt="サンプル画像" width="" height=""> -->
-          </div>
-
-          <div id="suisho_cjmap" class="section-box">
-            <h2>customer journey map</h2>
-            <!-- <img src="sample.jpg" alt="サンプル画像" width="" height=""> -->
-          </div>
-        </div>
-
-        <div id="suisho_ui" class="section">
-          <div class="lead">
-            <p>
-              今後可視化手法の追加を検討しているため、システムのUIを一新する予定である。<br />
-              未実装ではあるが、考案中の設計図を掲載する。<br />
-            </p>
-          </div>
-
-          <div class="section-box">
-            <div class="carousel-wrapper">
-              <div class="carousel-img"></div>
-            </div>
-            <div class="carousel-text">
-              <p>
-                選手の情報の読み込み画面をレコーディング画面とは別の画面にし、<br />
-                ユーザーが操作に迷うことなくシステムの利用ができるように改善した。<br />
-                レコーディング画面では右側に全ての操作パネルを設置し、<br />
-                上から順に操作することでレコーディングが完了する。<br />
-              </p>
-            </div>
-          </div>
-
-          <div class="section-box">
-            <div class="carousel-wrapper">
-              <div class="carousel-img"></div>
-            </div>
-            <div class="carousel-text">
-              <p>
-                選手の情報の読み込み画面をレコーディング画面とは別の画面にし、<br />
-                ユーザーが操作に迷うことなくシステムの利用ができるように改善した。<br />
-                レコーディング画面では右側に全ての操作パネルを設置し、<br />
-                上から順に操作することでレコーディングが完了する。<br />
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div id="suisho_conference" class="section">
-          <div class="section-box">
-            <p>
-              2022.02.27~03.02 DEIM 2022<br />
-              (第14回データ工学と情報マネジメントに関するフォーラム)<br />
-              DEIM学生プレゼンテーション賞受賞<br />
-            </p>
-            <button>paper</button>
-          </div>
-
-          <div class="section-box">
-            <p>
-              2022.08.22~08.23<br />
-              第 199回 ヒューマンコンピュータインタラクション研究会<br />
-              学生奨励賞受賞<br />
-            </p>
-            <button>paper</button>
-          </div>
-
-          <div class="section-box">
-            <p>
-              2022.11.04~11.05<br />
-              NICOGRAPH 2022<br />
-              ショートペーパー投稿予定<br />
-            </p>
-            <button>paper</button>
-          </div>
         </div>
       </div>
 
-      <footer>
-        <div class="footer-container">
-          <p>RISA KITAGAWA</p>
-          <p>2022.10.10</p>
+      <div class="movie-box flex-box">
+        <div class="movie-wrapper"></div>
+        <div class="movie-text">
+          <p>
+            前述のシステムで得られた情報を 可視化するシステムの画面。
+            Javascriptを用いて描画している。 三次元ボーン表示を行うことで、
+            通常は見られない任意の角度で 払いの様子を観察できる。
+            グラフ表示でも比較をすることで、 より詳細な分析ができる。
+          </p>
         </div>
-      </footer>
+      </div>
     </div>
+
+    <div id="suisho_ux" class="section">
+      <h1>User Experience</h1>
+      <div id="suisho_persona" class="section-box">
+        <h2>user persona</h2>
+        <img
+          src="./img/userpersona_suisho.jpg"
+          alt="suishoのユーザーペルソナ"
+        />
+      </div>
+
+      <div id="suisho_cjmap" class="section-box">
+        <h2>customer journey map</h2>
+        <img
+          src="./img/journeymap_suisho.jpg"
+          alt="suishoのカスタマージャーニーマップ"
+        />
+      </div>
+    </div>
+
+    <div id="suisho_ui" class="section">
+      <h1>User Interface</h1>
+      <div class="lead">
+        <p>
+          今後可視化手法の追加を検討しているため、システムのUIを一新する予定である。
+          未実装ではあるが、考案中の設計図を掲載する。
+        </p>
+      </div>
+
+      <div class="section-box">
+        <div class="carousel-wrapper">
+          <div class="carousel-img">
+            <img
+              src="./img/ui_suisho/index.html.jpg"
+              alt="suishoの新しいUI（index.html）"
+            />
+          </div>
+        </div>
+        <div class="carousel-text lead">
+          <p>
+            選手の情報の読み込み画面をレコーディング画面とは別の画面にし、
+            ユーザーが操作に迷うことなくシステムの利用ができるように改善した。
+            レコーディング画面では右側に全ての操作パネルを設置し、
+            上から順に操作することでレコーディングが完了する。
+          </p>
+        </div>
+      </div>
+
+      <div class="section-box">
+        <div class="carousel-wrapper">
+          <div class="carousel-img">
+            <img
+              src="./img/ui_suisho/visualization1p.html.jpg"
+              alt="suishoの新しいUI（1人用の可視化システム）"
+            />
+          </div>
+        </div>
+        <div class="carousel-text lead">
+          <p>
+            可視化手法の追加に伴い情報量が多くなることを見込んで、
+            可視化画面は一人用の可視化と複数人で比較用の可視化の2画面に分けた。
+            ボーン表示とグラフ表示はマウスによる操作で自在に視点を変えることができ、
+            直感的な操作で可視化を分析することができる。
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="suisho_conference" class="section">
+      <h1>Conference</h1>
+      <div class="section-box">
+        <p>2022.02.27~03.02 DEIM 2022</p>
+        <p>(第14回データ工学と情報マネジメントに関するフォーラム)</p>
+        <p>DEIM学生プレゼンテーション賞受賞</p>
+        <button>paper</button>
+      </div>
+
+      <div class="section-box">
+        <p>2022.08.22~08.23</p>
+        <p>第 199回 ヒューマンコンピュータインタラクション研究会</p>
+        <p>学生奨励賞受賞</p>
+        <button>paper</button>
+      </div>
+
+      <div class="section-box">
+        <p>2022.11.04~11.05</p>
+        <p>NICOGRAPH 2022 ショートペーパー投稿予定</p>
+        <button>paper</button>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <p>RISA KITAGAWA</p>
+        <p>2022.10.10</p>
+      </div>
+    </footer>
   </body>
 </html>

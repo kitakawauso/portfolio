@@ -1,0 +1,244 @@
+/* -------------------- */
+/* CSS reset
+/* -------------------- */
+
+html {
+  background: #fff;
+  color: #333;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+body {
+  font-family: "Roboto", "Noto Sans JP", sans-serif;
+  text-align: center;
+  line-height: 2rem;
+  letter-spacing: 0.12rem;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 2rem 0;
+  letter-spacing: 0.36rem;
+}
+
+img {
+  vertical-align: bottom;
+  width: 100%;
+}
+
+/* -------------------- */
+/* header
+/* -------------------- */
+.header {
+  width: 100vw;
+  height: auto;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+.header-list {
+  width: fit-content;
+  padding: 2vh 1vw 0 0;
+  margin-left: auto;
+}
+
+.header-item {
+  width: fit-content;
+  display: inline;
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+
+/* -------------------- */
+/* top
+/* -------------------- */
+
+.top-img {
+  margin: 10vh 10vw;
+  min-height: 300px;
+  background-color: antiquewhite;
+}
+
+@media screen and (min-width:480px) {
+  .top-img {
+    height: 50vh;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .top-img {
+    height: 70vh;
+  }
+}
+
+/* -------------------- */
+/* footer
+/* -------------------- */
+
+.footer {
+  width: 100vw;
+  height: 20vh;
+  margin-top: 30vh;
+  background-color: #D9D9D9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container p {
+  padding: 0.5rem 0;
+}
+
+/* -------------------- */
+/* button
+/* -------------------- */
+
+.btn {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn.banner {
+  height: 250px;
+  width: auto;
+  margin: 10vh 10vw;
+  background-color: blue;
+  font-size: 4rem;
+  letter-spacing: 0.8rem;
+}
+
+.btn a {
+  padding: auto 0;
+}
+
+/* -------------------- */
+/* works
+/* -------------------- */
+
+/* -------------------- */
+/* suisho.html
+/* -------------------- */
+
+.section {
+  margin: 10vh 10vw;
+}
+
+.section-box {
+  margin: 5vh 0;
+}
+
+@media screen and (min-width:1024px) {
+  .lead p {
+    margin: 0 auto;
+    width: 60vw;
+  }
+}
+
+.flex-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-box div{
+  margin: 1vh 1vw;
+}
+
+.movie-box {
+  width: 100%;
+  margin: 2.5vh 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-wrapper {
+  background-color: aqua;
+}
+
+.movie-text {
+  padding: 1vh 1vw;
+}
+
+@media screen and (min-width:480px) {
+  .movie-wrapper {
+    width: 80vw;
+    height: 60vw;
+  }
+  .movie-text {
+    width: auto;
+    height: auto;
+    margin: 10vh 10vw;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .movie-wrapper {
+      width: 40vw;
+      height: 30vw;
+    }
+  
+    .movie-text {
+      width: 20vw;
+      height: auto;
+      margin: 10vh 10vw;
+    }
+}
+
+.section img {
+  margin: 5vh 0;
+  max-width: 60vw;
+}
