@@ -3,6 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <link href="./style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- slick -->
+    <link rel="stylesheet" href="./libs/slick.css" />
+    <link rel="stylesheet" href="./libs/slick-theme.css" />
+
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/b8f8cbabf4.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   </head>
 
   <body>
@@ -10,13 +22,13 @@
       <div class="header-inner">
         <ul class="header-list">
           <li class="header-item">
-            <a href="">WORKS</a>
+            <a href="./index.html#works">WORKS</a>
           </li>
           <li class="header-item">
             <a href="">ABOUT</a>
           </li>
           <li class="header-item">
-            <a href="">Github</a>
+            <a href=""><i class="fa-brands fa-github"></i></a>
           </li>
         </ul>
       </div>
@@ -24,11 +36,11 @@
 
     <div class="top-wrapper">
       <div class="top-img">
-        <!-- <img src="sample.jpg" alt="サンプル画像" width="" height=""> -->
+        <img src="./img/topimg_suisho.jpg" alt="suishoのロゴ" />
       </div>
     </div>
 
-    <div id="suisho_about" class="section">
+    <div id="suisho_abstract" class="section">
       <h1>Abstract</h1>
 
       <div class="lead">
@@ -38,14 +50,22 @@
           競技者の競技能力の向上が目的である。
           機械学習を用いて姿勢推定を行い、得られた情報を可視化することで
           選手の取りについて分析を行う。
-          複数人の情報を用いて比較を行うことで、より詳細な分析が行える。
+          複数人の情報を用いて比較を行うことで、より詳細な分析ができる。
         </p>
       </div>
-    </div>
 
-    <div id="suisho_abstract" class="section">
       <div class="movie-box flex-box">
-        <div class="movie-wrapper"></div>
+        <div class="movie-wrapper">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/O8tOCe2wGwE"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
         <div class="movie-text">
           <p>
             札を払っている様子を撮影し、 姿勢推定をするためのシステムの画面。
@@ -57,7 +77,17 @@
       </div>
 
       <div class="movie-box flex-box">
-        <div class="movie-wrapper"></div>
+        <div class="movie-wrapper">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/PMGpq248DTs"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
         <div class="movie-text">
           <p>
             前述のシステムで得られた情報を 可視化するシステムの画面。
@@ -98,15 +128,35 @@
       </div>
 
       <div class="section-box">
-        <div class="carousel-wrapper">
-          <div class="carousel-img">
-            <img
-              src="./img/ui_suisho/index.html.jpg"
-              alt="suishoの新しいUI（index.html）"
-            />
-          </div>
+        <div class="slider-wrapper">
+          <ul class="slider-ui">
+            <li>
+              <img
+                src="./img/ui_suisho/index.html.jpg"
+                alt="suishoの新しいUI（index.html）"
+              />
+            </li>
+            <li>
+              <img
+                src="./img/ui_suisho/select_extention.html.jpg"
+                alt="動画読み込みか新しく動画を撮影するか選択（select_extention.html）"
+              />
+            </li>
+            <li>
+              <img
+                src="./img/ui_suisho/form.html.jpg"
+                alt="選手の情報を入力するフォーム（form.html）"
+              />
+            </li>
+            <li>
+              <img
+                src="./img/ui_suisho/recording.html.jpg"
+                alt="払いの様子を撮影する画面（recording.html）"
+              />
+            </li>
+          </ul>
         </div>
-        <div class="carousel-text lead">
+        <div class="lead">
           <p>
             選手の情報の読み込み画面をレコーディング画面とは別の画面にし、
             ユーザーが操作に迷うことなくシステムの利用ができるように改善した。
@@ -117,45 +167,60 @@
       </div>
 
       <div class="section-box">
-        <div class="carousel-wrapper">
-          <div class="carousel-img">
+        <div class="vissystem-wrapper">
+          <div class="vissystem-item">
             <img
               src="./img/ui_suisho/visualization1p.html.jpg"
               alt="suishoの新しいUI（1人用の可視化システム）"
             />
+            <p>▲1人用の可視化システム</p>
+          </div>
+          <div class="vissystem-item">
+            <img
+              src="./img/ui_suisho/visualization2p.html.jpg"
+              alt="suishoの新しいUI（複数人比較用の可視化システム）"
+            />
+            <p>▲複数人比較用の可視化システム</p>
           </div>
         </div>
-        <div class="carousel-text lead">
-          <p>
-            可視化手法の追加に伴い情報量が多くなることを見込んで、
-            可視化画面は一人用の可視化と複数人で比較用の可視化の2画面に分けた。
-            ボーン表示とグラフ表示はマウスによる操作で自在に視点を変えることができ、
-            直感的な操作で可視化を分析することができる。
-          </p>
-        </div>
+      </div>
+      <div class="lead">
+        <p>
+          可視化手法の追加に伴い情報量が多くなることを見込んで、
+          可視化画面は一人用の可視化と複数人で比較用の可視化の2画面に分けた。
+          ボーン表示とグラフ表示はマウスによる操作で自在に視点を変えることができ、
+          直感的な操作で可視化を分析することができる。
+        </p>
       </div>
     </div>
 
     <div id="suisho_conference" class="section">
       <h1>Conference</h1>
       <div class="section-box">
-        <p>2022.02.27~03.02 DEIM 2022</p>
-        <p>(第14回データ工学と情報マネジメントに関するフォーラム)</p>
+        <p>2022.02.27~03.02</p>
+        <p>DEIM 2022 (第14回データ工学と情報マネジメントに関するフォーラム)</p>
         <p>DEIM学生プレゼンテーション賞受賞</p>
-        <button>paper</button>
+        <a href="" class="btn paper" target="_blank"
+          ><i class="fa-solid fa-file"></i>paper</a
+        >
       </div>
 
       <div class="section-box">
         <p>2022.08.22~08.23</p>
         <p>第 199回 ヒューマンコンピュータインタラクション研究会</p>
         <p>学生奨励賞受賞</p>
-        <button>paper</button>
+        <a href="" class="btn paper" target="_blank"
+          ><i class="fa-solid fa-file"></i>paper</a
+        >
       </div>
 
       <div class="section-box">
         <p>2022.11.04~11.05</p>
-        <p>NICOGRAPH 2022 ショートペーパー投稿予定</p>
-        <button>paper</button>
+        <p>NICOGRAPH 2022</p>
+        <p>ショートペーパー投稿予定</p>
+        <a href="" class="btn paper btn-invalid" target="_blank"
+          ><i class="fa-solid fa-file"></i>paper</a
+        >
       </div>
     </div>
 
@@ -165,5 +230,8 @@
         <p>2022.10.10</p>
       </div>
     </footer>
+
+    <script src="./libs/slick.min.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
