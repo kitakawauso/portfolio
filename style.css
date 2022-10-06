@@ -348,16 +348,25 @@ body.fadeout::after {
 }
 
 /* -------------------- */
-/* works
-/* -------------------- */
-
-/* -------------------- */
-/* suisho.html
+/* section
 /* -------------------- */
 
 .section {
   margin: 10vh 10vw;
   padding: 3vh 0;
+}
+
+.section img {
+  margin: 5vh 0;
+  max-width: 60vw;
+  -webkit-filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.2));
+  -moz-filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.2));
+  -ms-filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.2));
+}
+
+.section a:hover {
+  opacity: 80%;
 }
 
 .section-box {
@@ -370,6 +379,73 @@ body.fadeout::after {
     width: 60vw;
   }
 }
+
+/* -------------------- */
+/* modal
+/* -------------------- */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  overflow: scroll;
+}
+
+.modal-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.bigimg img {
+  position: relative;
+  max-width: 60vw;
+  margin: 10vh auto 3vh auto;
+}
+
+.close-btn {
+  position: relative;
+  z-index: 9999;
+  margin: 0 auto;
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+}
+
+.close-btn span {
+  display: inline-block;
+  transition: all 0.4s;
+  position: absolute;
+  left: 14px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #333;
+  width: 45%;
+}
+
+.close-btn span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 50%;
+  background-color: #fff;
+}
+
+.close-btn span:nth-of-type(2) {
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 50%;
+  background-color: #fff;
+}
+
+/* -------------------- */
+/* movie box
+/* -------------------- */
 
 .flex-box {
   display: flex;
@@ -425,10 +501,9 @@ body.fadeout::after {
   }
 }
 
-.section img {
-  margin: 5vh 0;
-  max-width: 60vw;
-}
+/* -------------------- */
+/* slider
+/* -------------------- */
 
 .slider-wrapper {
   text-align: center;
@@ -443,18 +518,17 @@ body.fadeout::after {
 .slider-ui img {
   width: 100%;
   height: 100%;
-  margin: 0 auto;
+  margin: 3vh auto;
   object-fit: cover;
-}
-
-.slick-prev:before,
-.slick-next:before {
-  color: #333;
 }
 
 .slick-dots li button:before {
   font-size: 1.5rem;
 }
+
+/* -------------------- */
+/* vis system
+/* -------------------- */
 
 @media screen and (min-width: 480px) {
   .vissystem-wrapper {

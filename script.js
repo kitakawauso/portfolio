@@ -17,23 +17,55 @@ $(function () {
   });
 });
 
+// scroll animation
+$(function () {
+  $('a[href^="#"]').click(function () {
+    var time = 500;
+    var href = $(this).attr("href");
+    var target = $(href == "#" || href == "" ? "html" : href);
+    var position = target.offset().top;
+    $("html,body").animate({ scrollTop: position }, time, "swing");
+    return false;
+  });
+});
+
 // global navigation
 $(".open-btn").click(function () {
-  //ボタンがクリックされたら
-  $(this).toggleClass("active"); //ボタン自身に activeクラスを付与し
-  $("#global-nav").toggleClass("panel-active"); //ナビゲーションにpanel-activeクラスを付与
+  $(this).toggleClass("active");
+  $("#global-nav").toggleClass("panel-active");
 });
 
 $("#global-nav a").click(function () {
-  //ナビゲーションのリンクがクリックされたら
-  $(".open-btn").removeClass("active"); //ボタンの activeクラスを除去し
-  $("#global-nav").removeClass("panel-active"); //ナビゲーションのpanel-activeクラスも除去
+  $(".open-btn").removeClass("active");
+  $("#global-nav").removeClass("panel-active");
+});
+
+// modal
+$(function () {
+  $(".section a").click(function () {
+    var imgSrc = $(this).children().attr("src");
+    $(".bigimg").children().attr("src", imgSrc);
+    $(".modal").fadeIn();
+    $("body,html").css("overflow-y", "hidden");
+    return false;
+  });
+
+  $(".modal-close").click(function () {
+    $(".modal").fadeOut();
+    $("body,html").css("overflow-y", "visible");
+    return false;
+  });
 });
 
 // slider
 $(function () {
   $(".slider-ui").slick({
-    arrows: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    speed: 800,
     dots: true,
+    arrows: false,
+    infinite: true,
+    pauseOnHover: false,
   });
 });
