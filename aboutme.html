@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <link href="./style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- slick -->
+    <link rel="stylesheet" href="./libs/slick.css" />
+    <link rel="stylesheet" href="./libs/slick-theme.css" />
+
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/b8f8cbabf4.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+
+  <body class="fadeout">
+    <div class="open-btn"><span></span><span></span><span></span></div>
+    <nav id="global-nav">
+      <ul class="header-list">
+        <li>
+          <a href="./index.html">TOP</a>
+        </li>
+
+        <li>
+          <a href="./suisho.html"
+            ><i class="fa-solid fa-chevron-right"></i>suisho</a
+          >
+        </li>
+        <li>
+          <a href="./photream.html"
+            ><i class="fa-solid fa-chevron-right"></i>photream</a
+          >
+        </li>
+        <li>
+          <a href="./portfolio.html"
+            ><i class="fa-solid fa-chevron-right"></i>this site</a
+          >
+        </li>
+
+        <li>
+          <a href="./aboutme.html">ABOUT ME</a>
+        </li>
+
+        <li>
+          <a href=""><i class="fa-brands fa-github"></i></a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="aboutme_about" class="section">
+      <h1>About</h1>
+
+      <div class="lead">
+        <p>
+          <a href="https://photream.com/company">株式会社Photream</a
+          >が運営する「<a href="https://photream.com/college" target="_blank"
+            >フォトリ大学</a
+          >」のインスタグラムの運用に携わった。<br />
+          自身もカメラマンとしてアルバイトを行っていた経験を生かし、企画担当のカメラマンと話し合いながら
+          ”子供の写真をうまく撮るTips”をメインテーマとした投稿を行っていた。<br />
+          主にインスタグラムに投稿するフィードやアイコンのデザイン、そしてインサイト分析を担当した。<br />
+          フォトリ大学運営から提示された目標はフォロワーを1.4万人の状態から2万人まで増やすことだったが、
+          約3ヶ月間で目標を達成することができた。<br />
+        </p>
+      </div>
+
+      <div class="link-box">
+        <a href="https://photream.com/company" class="btn link" target="_blank"
+          ><i class="fa-solid fa-camera"></i>株式会社Photream</a
+        >
+        <a href="https://photream.com/college" class="btn link" target="_blank"
+          ><i class="fa-solid fa-camera"></i>フォトリ大学</a
+        >
+      </div>
+    </div>
+
+    <div id="photream_ux" class="section">
+      <h1>User Experience</h1>
+      <div class="lead">
+        <p>
+          フォトリ大学は写真をうまく撮れるようになりたいママ・パパ向けのオンラインコミュニティである。<br />
+          そこで、今回はインスタグラムを使うことを趣味としている主婦をペルソナとして想定した。<br />
+          インスタグラムのおすすめ欄で偶然フォトリ大学の投稿を発見し、フォロワーになるまでのカスタマージャーニーマップを制作した。<br />
+        </p>
+      </div>
+
+      <a href="" class="modal-img"
+        ><img
+          src="./img/photream/userpersona_photream.jpg"
+          alt="フォトリ大学のユーザーペルソナ"
+          class="portrait-img"
+      /></a>
+
+      <div class="lead">
+        <p>
+          ユーザーは30代〜40代の親であることから、柔らかい雰囲気の画像になるよう心がけた。<br />
+          使用するフォントは丸く、そして読みやすいものを選んでいる。<br />
+          また、短時間で投稿の最後の画像に辿り着けるよう、画像の1枚当たりの文字数は減らしてテンポ良く読めるよう工夫した。<br />
+        </p>
+      </div>
+    </div>
+
+    <div id="feed_design" class="section">
+      <h1>Feed Design</h1>
+
+      <div class="section-box">
+        <h2>call to action</h2>
+        <div class="lead">
+          <p>
+            投稿を見たユーザーにアクションを呼びかけるCTA（Call To
+            Action）の画面のデザインを改善した。<br />
+            ”いいね”や”保存”の数を増やすことでおすすめ欄に表示される可能性が高くなりフォロワーを増やすことにつながるため、
+            CTA画面を設置することは重要である。<br />
+          </p>
+          <p>
+            それまでに使用されていたCTA画面をもとに、より”いいね”をしたくなるようにデザインを一新した。<br />
+            背景にはその投稿で用いた写真をぼかしたものを使用し、投稿内容が印象に残るようなCTA画面にした。<br />
+            また、画像を2回タップすると”いいね”ができる仕組みを活用し、
+            カメラのイラストを設置することでタップしたくなる工夫を施している。<br />
+          </p>
+        </div>
+        <div class="dualpanel-wrapper">
+          <div class="dualpanel-item">
+            <img src="./img/photream/cta_before.jpeg" alt="変更前のCTA" />
+            <h5>▲変更前のCTA</h5>
+          </div>
+          <div class="dualpanel-item">
+            <img src="./img/photream/cta_after.jpeg" alt="変更後のCTA" />
+            <h5>▲変更後のCTA</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-box">
+        <h2>feed</h2>
+        <div class="lead">
+          <p>
+            インスタグラムの投稿は正方形の画像が主流であり、
+            投稿を一覧で表示すると正方形に切り取られたサムネイルが表示される。<br />
+            そこで、あえて縦長の画像にすると投稿を開いたときに驚きが生まれ印象を残すことができる。<br />
+          </p>
+        </div>
+        <div class="dualpanel-wrapper">
+          <div class="dualpanel-item">
+            <img
+              src="./img/photream/square_feed.png"
+              alt="一覧で表示されるサムネイル"
+            />
+            <h5>▲一覧で表示されるサムネイル</h5>
+          </div>
+
+          <div class="dualpanel-item">
+            <img
+              src="./img/photream/rectangle_feed.jpeg"
+              alt="投稿を開いたときに表示される画像"
+            />
+            <h5>▲投稿を開いたときに表示される画像</h5>
+          </div>
+        </div>
+
+        <div class="lead">
+          <p>
+            投稿の内容のタグを画像内にも貼り付けることで投稿のテーマをわかりやすくしたり、
+            上部には投稿を読み進めたくなるようなリード文を書いた。<br />
+            これにより、おすすめ欄から投稿を開いたユーザーの離脱を防ぐことを期待した。<br />
+          </p>
+        </div>
+      </div>
+
+      <div class="dualpanel-wrapper">
+        <div class="dualpanel-item">
+          <img src="./img/photream/list_before.png" alt="変更前の一覧表示" />
+          <h5>▲変更前の一覧表示</h5>
+        </div>
+        <div class="dualpanel-item">
+          <img src="./img/photream/list_after.png" alt="変更後の一覧表示" />
+          <h5>▲変更後の一覧表示</h5>
+        </div>
+      </div>
+
+      <div class="lead">
+        <p>
+          また、投稿のテーマごとに色分けをし、一覧で表示した際にも興味のあるテーマを選べるように工夫した。<br />
+          文字でテーマを表すことも考えたが、一覧で表示した際には細かい文字は見えづらく雑然とした印象になってしまい
+          タイトルの文字が引き立たなくなってしまうため、色分けでのみ区別をした。<br />
+        </p>
+      </div>
+    </div>
+
+    <div id="photream_result" class="section">
+      <h1>Result</h1>
+      <div class="lead">
+        <p>
+          2021年の6月からインスタグラム運用に携わり、それから3ヶ月間の間でフォロワーを6000人近く増やすことに成功した。<br />
+        </p>
+      </div>
+
+      <div class="dualpanel-wrapper">
+        <div class="dualpanel-item">
+          <img
+            src="./img/photream/follower_before.PNG"
+            alt="初期のフォロワー数"
+          />
+          <h5>▲2021.06.17時点でのフォロワー数</h5>
+        </div>
+        <div class="dualpanel-item">
+          <img
+            src="./img/photream/follower_after.PNG"
+            alt="改善後のフォロワー数"
+          />
+          <h5>▲2021.09.05時点でのフォロワー数</h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal">
+      <div class="modal-bg modal-close"></div>
+      <div class="bigimg"><img src="" alt="" /></div>
+      <div class="close-btn modal-close"><span></span><span></span></div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <p>RISA KITAGAWA</p>
+        <p>2022.10.10</p>
+      </div>
+    </footer>
+
+    <script src="./libs/slick.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
