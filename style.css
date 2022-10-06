@@ -5,8 +5,7 @@
 html {
   background: #fff;
   color: #333;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  width: 100vw;
 }
 
 body,
@@ -196,6 +195,10 @@ i {
 /* top
 /* -------------------- */
 
+.top-wrapper {
+  align-content: center;
+}
+
 .top-img {
   width: 80vw;
   margin: 10vh auto 0 auto;
@@ -203,8 +206,7 @@ i {
 
 @media screen and (min-width: 480px) {
   .top-img img {
-    width: auto;
-    height: 40vh;
+    max-width: 80vw;
   }
 
   .scroll-arrow {
@@ -368,6 +370,7 @@ body.fadeout::after {
 /* -------------------- */
 
 .section {
+  width: auto;
   margin: 10vh 10vw;
   padding: 3vh 0;
 }
