@@ -42,7 +42,7 @@ $("#global-nav a").click(function () {
 
 // modal
 $(function () {
-  $(".section a").click(function () {
+  $(".section .modal-img").click(function () {
     var imgSrc = $(this).children().attr("src");
     $(".bigimg").children().attr("src", imgSrc);
     $(".modal").fadeIn();
