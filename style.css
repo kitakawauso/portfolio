@@ -77,6 +77,11 @@ a {
   color: #333;
   text-decoration: none;
   text-align: left;
+  transition: all 0.4s;
+}
+
+a:hover {
+  opacity: 60%;
 }
 
 p {
@@ -109,7 +114,7 @@ i {
   width: 100%;
   height: 100vh;
   background: #333;
-  transition: all 0.6s;
+  transition: all 0.4s;
 }
 
 #global-nav.panel-active {
@@ -136,6 +141,11 @@ i {
   display: block;
   letter-spacing: 0.1rem;
   font-size: 2rem;
+  transition: all 0.4s;
+}
+
+#global-nav li a:hover {
+  opacity: 40%;
 }
 
 .open-btn {
@@ -146,6 +156,11 @@ i {
   cursor: pointer;
   width: 70px;
   height: 70px;
+  transition: all 0.4s;
+}
+
+.open-btn:hover {
+  opacity: 60%;
 }
 
 .open-btn span {
@@ -202,6 +217,10 @@ i {
 .top-img {
   width: 80vw;
   margin: 10vh auto 0 auto;
+}
+
+.top-img a:hover {
+  opacity: 100%;
 }
 
 @media screen and (min-width: 480px) {
@@ -296,7 +315,7 @@ body::after {
   z-index: 9999;
   pointer-events: none;
   opacity: 0;
-  -webkit-transition: opacity 0.8s ease;
+  transition: all 0.4s;
 }
 
 body.fadeout::after {
@@ -319,13 +338,17 @@ body.fadeout::after {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
   text-align: center;
   vertical-align: middle;
   text-decoration: none;
   letter-spacing: 0.1em;
   color: #fff;
+}
+
+.btn:hover {
+  opacity: 80%;
 }
 
 .btn i {
@@ -342,21 +365,21 @@ body.fadeout::after {
 }
 
 .btn.paper {
-  width: 8rem;
-  height: 2rem;
+  width: 5rem;
+  height: 0.5rem;
   margin: 1rem auto;
   background-color: #333;
   border-radius: 5rem;
 }
 
-.btn.paper.btn-invalid {
+.btn.btn-invalid {
   pointer-events: none;
   background-color: #aaa;
 }
 
 .btn.link {
-  width: 20rem;
-  height: 3rem;
+  width: 15rem;
+  height: 1rem;
   margin: 1rem auto;
   background-color: #333;
   border-radius: 5rem;
@@ -377,7 +400,7 @@ body.fadeout::after {
 }
 
 .section img {
-  margin: 5vh 0;
+  margin: 5vh 0 2vh 0;
   max-width: 60vw;
   -webkit-filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.2));
   -moz-filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.2));
@@ -385,12 +408,18 @@ body.fadeout::after {
   filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.2));
 }
 
-.section .small-img {
+@media screen and (min-width: 1024px) {
+  .section img {
+    margin: 5vh 0;
+  }
+}
+
+.section .portrait-img {
   max-height: 80vh;
 }
 
-.section a:hover {
-  opacity: 80%;
+.section .small-img {
+  width: 30vw;
 }
 
 .section.align-center p {
@@ -398,14 +427,14 @@ body.fadeout::after {
 }
 
 .section-box {
-  margin: 5vh 0;
+  margin: 8vh 0;
 }
 
 @media screen and (min-width: 1024px) {
   .lead p {
     margin: 5vh auto;
     padding: 0 5vw;
-    width: 40vw;
+    width: 50vw;
   }
 }
 
@@ -444,6 +473,11 @@ body.fadeout::after {
   cursor: pointer;
   width: 70px;
   height: 70px;
+  transition: all 0.4s;
+}
+
+.close-btn:hover {
+  opacity: 60%;
 }
 
 .close-btn span {

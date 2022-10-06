@@ -25,12 +25,20 @@
           <a href="./index.html">TOP</a>
         </li>
 
-        <li><a href="./suisho.html">suisho</a></li>
         <li>
-          <a href="./photream.html">photream</a>
+          <a href="./suisho.html"
+            ><i class="fa-solid fa-chevron-right"></i>suisho</a
+          >
         </li>
         <li>
-          <a href="./portfolio.html">this site</a>
+          <a href="./photream.html"
+            ><i class="fa-solid fa-chevron-right"></i>photream</a
+          >
+        </li>
+        <li>
+          <a href="./portfolio.html"
+            ><i class="fa-solid fa-chevron-right"></i>this site</a
+          >
         </li>
 
         <li>
@@ -45,7 +53,9 @@
 
     <div class="top-wrapper">
       <div class="top-img">
-        <img src="./img/suisho/topimg_suisho.jpg" alt="suishoのロゴ" />
+        <a href="#portfolio_about"
+          ><img src="./img/suisho/topimg_suisho.jpg" alt="suishoのロゴ" />
+        </a>
       </div>
 
       <a href="#portfolio_about" class="scroll-arrow"></a>
@@ -58,7 +68,7 @@
         <p>
           就職活動のため、これまでの制作物をまとめて掲載するためのポートフォリオサイトを制作した。<br />
           採用担当をペルソナとして設定し、Figmaを用いてUI設計を行った。<br />
-          また、サイトを制作するにあたりこれまでの制作物にそれぞれのUXを練り直したため、その経過もここに掲載する。<br />
+          ポートフォリオサイトも制作物の一部になると考え、UXや制作過程などを記すページを制作することにした。<br />
         </p>
       </div>
     </div>
@@ -69,7 +79,6 @@
         <p>
           企業の新卒採用担当をペルソナとして想定した。<br />
           これまでの就職活動で出会った採用担当の方や社員の方々をモデルに作成している。<br />
-          ポートフォリオサイトも制作物の一部になると考え、UXや制作過程などを記すページを制作することにした。<br />
         </p>
       </div>
 
@@ -77,7 +86,7 @@
         ><img
           src="./img/portfolio/userpersona_portfolio.jpg"
           alt="ポートフォリオサイトのユーザーペルソナ"
-          class="small-img"
+          class="portrait-img"
       /></a>
     </div>
 
@@ -88,7 +97,11 @@
         <h2>rough</h2>
         <div class="lead">
           <p>
-            まずはiPadのアプリを使ってポートフォリオサイトのラフを描いた。<br />
+            まずはiPadの「<a
+              href="https://apps.apple.com/jp/app/%E3%82%B3%E3%83%B3%E3%82%BB%E3%83%97%E3%83%88/id560586497"
+              target="_blank"
+              >コンセプト</a
+            >」というアプリを使ってポートフォリオサイトのラフを描いた。<br />
             制作過程の中で、より使いやすくするために微調整した点はあるが、大まかにはこのラフ通りに制作している。<br />
           </p>
         </div>
@@ -97,7 +110,7 @@
           ><img
             src="./img/portfolio/rough_portfolio.jpg"
             alt="iPadで描いたポートフォリオサイトのラフ"
-            class="small-img"
+            class="portrait-img"
         /></a>
       </div>
 
@@ -132,63 +145,101 @@
 
         <div class="lead">
           <p>
-            投稿の内容のタグを画像内にも貼り付けることで投稿のテーマをわかりやすくしたり、
-            上部には投稿を読み進めたくなるようなリード文を書いた。<br />
-            これにより、おすすめ欄から投稿を開いたユーザーの離脱を防ぐことを期待した。<br />
+            できるだけシンプルで無駄のないデザインにし、コンテンツの中身が見やすいように心がけた。<br />
+            他のページへ移動するためのメニューはコンパクトな実装が可能であるハンバーガーメニューを選んだ。<br />
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="portfolio_coding" class="section">
+      <h1>Coding</h1>
+      <div class="lead">
+        <p>
+          プロトタイプではかなりシンプルなデザインを想定していたため、コーディングで不可能なデザインはなく、比較的スムーズにコーディングをすることができたと感じた。<br />
+          コーディングを意識しながらデザインを考えられたと思う。<br />
+          実際にコーディングに移ってからは、追加で必要だと考えられるものを付け足した。<br />
+        </p>
+      </div>
+
+      <div class="section-box">
+        <h2>prompt to scroll</h2>
+
+        <img
+          src="./img/portfolio/prompt_scroll.png"
+          alt="スクロールを促す記号"
+          class="small-img"
+        />
+
+        <div class="lead">
+          <p>
+            suishoやポートフォリオサイトを紹介するページではトップに大きくロゴを表示するというデザインであるため、ユーザーがスクロールをしなければならないことに気づかない場合が想定された。<br />
+            そのため、トップの画像の下にスクロールを促す記号を表示させている。<br />
+            この記号やトップの画像をクリックすることでも直下のコンテンツに自動スクロールできるようにした。<br />
+            また、この実装に伴い記号をクリックしたときにゆっくりスクロールするようなアニメーションもjQueryで実装している。<br />
           </p>
         </div>
       </div>
 
-      <div class="dualpanel-wrapper">
-        <div class="dualpanel-item">
-          <img src="./img/photream/list_before.png" alt="変更前の一覧表示" />
-          <h5>▲変更前の一覧表示</h5>
-        </div>
-        <div class="dualpanel-item">
-          <img src="./img/photream/list_after.png" alt="変更後の一覧表示" />
-          <h5>▲変更後の一覧表示</h5>
+      <div class="section-box">
+        <h2>slider</h2>
+
+        <img
+          src="./img/portfolio/slider_portfolio.png"
+          alt="スライダー"
+          class="small-img"
+        />
+
+        <div class="lead">
+          <p>
+            suishoのUIを表示させる際、全部で4画面あるUIの画像を全て並べると冗長になってしまうと考えた。<br />
+            そこで、スライダーを設置して横にスライドできるようにjQueryを用いて実装した。<br />
+            ユーザーがスライダーに気づかないことが想定されたので、自動でスライドさせた上に、現在何枚目かを示すドットを配置している。<br />
+            また、スマートフォンでのタッチ操作にも対応している。<br />
+          </p>
         </div>
       </div>
 
-      <div class="lead">
-        <p>
-          また、投稿のテーマごとに色分けをし、一覧で表示した際にも興味のあるテーマを選べるように工夫した。<br />
-          文字でテーマを表すことも考えたが、一覧で表示した際には細かい文字は見えづらく雑然とした印象になってしまい
-          タイトルの文字が引き立たなくなってしまうため、色分けでのみ区別をした。<br />
-        </p>
+      <div class="section-box">
+        <h2>image</h2>
+
+        <div class="dualpanel-wrapper">
+          <div class="dualpanel-item">
+            <a href="" class="modal-img"
+              ><img
+                src="img/portfolio/img_noshadow.png"
+                alt="ドロップシャドウがない場合"
+              />
+            </a>
+            <h5>▲ドロップシャドウがない場合</h5>
+          </div>
+          <div class="dualpanel-item">
+            <a href="" class="modal-img"
+              ><img
+                src="img/portfolio/img_shadow.png"
+                alt="ドロップシャドウがある場合"
+              />
+            </a>
+            <h5>▲ドロップシャドウがある場合</h5>
+          </div>
+        </div>
+
+        <div class="lead">
+          <p>
+            imgタグに対してドロップシャドウを適用し、画像であることを強調した。<br />
+            当初はドロップシャドウを適用する予定はなかったが、画像の境界がわかりづらかったために追加で実装した。<br /><br />
+            また、拡大が必要そうな画像に対してはクリックしてモーダルを表示できるようにしている。<br />
+            モーダル表示の際には背景を暗くし、バツ印のボタン以外にも背景をクリックしてモーダルを閉じられるようにした。<br /><br />
+            そのほかにも、比較したい2枚の画像はデスクトップ上で2つ横並びにしているが、スマートフォンで見る際には縦並びになるようにしたりと小さな工夫を凝らしている。<br />
+          </p>
+        </div>
       </div>
     </div>
 
-    <div id="photream_result" class="section">
-      <h1>Result</h1>
-      <div class="lead">
-        <p>
-          2021年の6月からインスタグラム運用に携わり、それから3ヶ月間の間でフォロワーを6000人近く増やすことに成功した。<br />
-        </p>
-      </div>
-
-      <div class="dualpanel-wrapper">
-        <div class="dualpanel-item">
-          <img
-            src="./img/photream/follower_before.PNG"
-            alt="初期のフォロワー数"
-          />
-          <h5>▲2021.06.17時点でのフォロワー数</h5>
-        </div>
-        <div class="dualpanel-item">
-          <img
-            src="./img/photream/follower_after.PNG"
-            alt="改善後のフォロワー数"
-          />
-          <h5>▲2021.09.05時点でのフォロワー数</h5>
-        </div>
-      </div>
-
-      <div class="modal">
-        <div class="modal-bg modal-close"></div>
-        <div class="bigimg"><img src="" alt="" /></div>
-        <div class="close-btn modal-close"><span></span><span></span></div>
-      </div>
+    <div class="modal">
+      <div class="modal-bg modal-close"></div>
+      <div class="bigimg"><img src="" alt="" /></div>
+      <div class="close-btn modal-close"><span></span><span></span></div>
     </div>
 
     <footer class="footer">
