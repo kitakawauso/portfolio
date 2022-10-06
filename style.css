@@ -77,6 +77,11 @@ li {
 a {
   color: #333;
   text-decoration: none;
+  text-align: left;
+}
+
+p {
+  text-align: left;
 }
 
 h1 {
@@ -87,7 +92,6 @@ h1 {
 
 img {
   vertical-align: bottom;
-  width: 100%;
 }
 
 i {
@@ -347,6 +351,18 @@ body.fadeout::after {
   background-color: #aaa;
 }
 
+.btn.link {
+  width: 20rem;
+  height: 3rem;
+  margin: 1rem auto;
+  background-color: #333;
+  border-radius: 5rem;
+}
+
+.link-box {
+  margin: 5vh auto;
+}
+
 /* -------------------- */
 /* section
 /* -------------------- */
@@ -365,8 +381,16 @@ body.fadeout::after {
   filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.2));
 }
 
+.section .small-img {
+  max-height: 80vh;
+}
+
 .section a:hover {
   opacity: 80%;
+}
+
+.section.align-center p {
+  text-align: center;
 }
 
 .section-box {
@@ -376,6 +400,7 @@ body.fadeout::after {
 @media screen and (min-width: 1024px) {
   .lead p {
     margin: 5vh auto;
+    padding: 0 5vw;
     width: 60vw;
   }
 }
@@ -403,8 +428,9 @@ body.fadeout::after {
 
 .bigimg img {
   position: relative;
+  width: 60%;
   max-width: 60vw;
-  margin: 10vh auto 3vh auto;
+  margin: 5vh auto 3vh auto;
 }
 
 .close-btn {
@@ -531,28 +557,34 @@ body.fadeout::after {
 /* -------------------- */
 
 @media screen and (min-width: 480px) {
-  .vissystem-wrapper {
+  .dualpanel-wrapper {
     width: 80vw;
+    margin-bottom: 5vh;
   }
 
-  .vissystem-item img {
+  .dualpanel-item img {
     width: 100%;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .vissystem-wrapper {
+  .dualpanel-wrapper {
     width: 80vw;
     display: flex;
     justify-content: center;
+    align-items: center;
   }
 
-  .vissystem-item {
+  .dualpanel-item {
     max-width: 30vw;
     margin: 0 2rem;
   }
 
-  .vissystem-item img {
+  .dualpanel-item img {
     width: 100%;
   }
+}
+
+.instagram {
+  margin: 5vh 0;
 }
