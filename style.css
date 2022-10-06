@@ -95,27 +95,97 @@ i {
 }
 
 /* -------------------- */
-/* header
+/* global navigation
 /* -------------------- */
-.header {
-  width: 100vw;
-  height: auto;
+
+#global-nav {
   position: fixed;
+  z-index: 999;
+  top: -120%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #333;
+  transition: all 0.6s;
+}
+
+#global-nav.panel-active {
   top: 0;
-  z-index: 100;
 }
 
-.header-list {
-  width: fit-content;
-  padding: 2vh 1vw 0 0;
-  margin-left: auto;
+#global-nav ul {
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.header-item {
-  width: fit-content;
-  display: inline;
-  margin-right: 1rem;
-  font-size: 1.5rem;
+#global-nav li {
+  list-style: none;
+  text-align: center;
+}
+
+#global-nav li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 2rem;
+  display: block;
+  letter-spacing: 0.1rem;
+  font-size: 2rem;
+}
+
+.open-btn {
+  position: fixed;
+  z-index: 9999;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+}
+
+.open-btn span {
+  display: inline-block;
+  transition: all 0.4s;
+  position: absolute;
+  left: 14px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #333;
+  width: 45%;
+}
+
+.open-btn span:nth-of-type(1) {
+  top: 15px;
+}
+
+.open-btn span:nth-of-type(2) {
+  top: 25px;
+}
+
+.open-btn span:nth-of-type(3) {
+  top: 35px;
+}
+
+.open-btn.active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 50%;
+  background-color: #fff;
+}
+
+.open-btn.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.open-btn.active span:nth-of-type(3) {
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 50%;
+  background-color: #fff;
 }
 
 /* -------------------- */
@@ -124,13 +194,21 @@ i {
 
 .top-img {
   width: 80vw;
-  margin: 10vh auto;
+  margin: 10vh auto 0 auto;
 }
 
 @media screen and (min-width: 480px) {
   .top-img img {
     width: auto;
-    height: 50vh;
+    height: 40vh;
+  }
+
+  .scroll-arrow {
+    display: none;
+  }
+
+  .scroll-arrow::before {
+    display: none;
   }
 }
 
@@ -138,6 +216,43 @@ i {
   .top-img img {
     width: auto;
     height: 70vh;
+  }
+
+  .scroll-arrow {
+    display: inline-block;
+    padding-top: 70px;
+    position: relative;
+  }
+  .scroll-arrow::before {
+    animation: scroll 3.5s infinite;
+    border: solid #333;
+    border-width: 0 0 4px 4px;
+    content: "";
+    display: inline-block;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    transform: rotate(-45deg);
+    width: 2vw;
+    height: 2vw;
+  }
+  @keyframes scroll {
+    0% {
+      transform: rotate(-45deg) translate(0, 0);
+    }
+    80% {
+      transform: rotate(-45deg) translate(-30px, 30px);
+    }
+    0%,
+    80%,
+    100% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
   }
 }
 
@@ -157,6 +272,28 @@ i {
 
 .footer-container p {
   padding: 0.5rem 0;
+}
+
+/* -------------------- */
+/* fadeout
+/* -------------------- */
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: opacity 0.8s ease;
+}
+
+body.fadeout::after {
+  opacity: 1;
 }
 
 /* -------------------- */
@@ -211,16 +348,25 @@ i {
 }
 
 /* -------------------- */
-/* works
-/* -------------------- */
-
-/* -------------------- */
-/* suisho.html
+/* section
 /* -------------------- */
 
 .section {
   margin: 10vh 10vw;
-  padding: 5vh 0;
+  padding: 3vh 0;
+}
+
+.section img {
+  margin: 5vh 0;
+  max-width: 60vw;
+  -webkit-filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.2));
+  -moz-filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.2));
+  -ms-filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.2));
+}
+
+.section a:hover {
+  opacity: 80%;
 }
 
 .section-box {
@@ -233,6 +379,73 @@ i {
     width: 60vw;
   }
 }
+
+/* -------------------- */
+/* modal
+/* -------------------- */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  overflow: scroll;
+}
+
+.modal-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.bigimg img {
+  position: relative;
+  max-width: 60vw;
+  margin: 10vh auto 3vh auto;
+}
+
+.close-btn {
+  position: relative;
+  z-index: 9999;
+  margin: 0 auto;
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+}
+
+.close-btn span {
+  display: inline-block;
+  transition: all 0.4s;
+  position: absolute;
+  left: 14px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #333;
+  width: 45%;
+}
+
+.close-btn span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 50%;
+  background-color: #fff;
+}
+
+.close-btn span:nth-of-type(2) {
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 50%;
+  background-color: #fff;
+}
+
+/* -------------------- */
+/* movie box
+/* -------------------- */
 
 .flex-box {
   display: flex;
@@ -288,10 +501,9 @@ i {
   }
 }
 
-.section img {
-  margin: 5vh 0;
-  max-width: 60vw;
-}
+/* -------------------- */
+/* slider
+/* -------------------- */
 
 .slider-wrapper {
   text-align: center;
@@ -306,18 +518,17 @@ i {
 .slider-ui img {
   width: 100%;
   height: 100%;
-  margin: 0 auto;
+  margin: 3vh auto;
   object-fit: cover;
-}
-
-.slick-prev:before,
-.slick-next:before {
-  color: #333;
 }
 
 .slick-dots li button:before {
   font-size: 1.5rem;
 }
+
+/* -------------------- */
+/* vis system
+/* -------------------- */
 
 @media screen and (min-width: 480px) {
   .vissystem-wrapper {

@@ -2,31 +2,46 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
-    <title>Portfolio | 北川リサ</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link href="./style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- slick -->
+    <link rel="stylesheet" href="./libs/slick.css" />
+    <link rel="stylesheet" href="./libs/slick-theme.css" />
+
+    <!-- font awesome -->
     <script
       src="https://kit.fontawesome.com/b8f8cbabf4.js"
       crossorigin="anonymous"
     ></script>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   </head>
 
-  <body>
-    <header class="header">
-      <div class="header-inner">
-        <ul class="header-list">
-          <li class="header-item">
-            <a href="./index.html#works">WORKS</a>
-          </li>
-          <li class="header-item">
-            <a href="">ABOUT</a>
-          </li>
-          <li class="header-item">
-            <a href=""><i class="fa-brands fa-github"></i></a>
-          </li>
-        </ul>
-      </div>
-    </header>
+  <body class="fadeout">
+    <div class="open-btn"><span></span><span></span><span></span></div>
+    <nav id="global-nav">
+      <ul class="header-list">
+        <li>
+          <a href="./index.html">TOP</a>
+        </li>
+
+        <li><a href="./suisho.html">suisho</a></li>
+        <li>
+          <a href="./photream.html">photream</a>
+        </li>
+        <li>
+          <a href="./portfolio.html">this site</a>
+        </li>
+
+        <li>
+          <a href="">ABOUT ME</a>
+        </li>
+
+        <li>
+          <a href=""><i class="fa-brands fa-github"></i></a>
+        </li>
+      </ul>
+    </nav>
 
     <div class="top-wrapper">
       <div class="top-img">
@@ -57,5 +72,8 @@
         <p>2022.10.10</p>
       </div>
     </footer>
+
+    <script src="./libs/slick.min.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
