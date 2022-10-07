@@ -85,6 +85,7 @@ a:hover {
 }
 
 p {
+  font-size: 110%;
   text-align: left;
 }
 
@@ -112,6 +113,7 @@ td {
 
 td i {
   margin: 0;
+  color: #ffc20e;
 }
 
 /* -------------------- */
@@ -149,11 +151,17 @@ td i {
 #global-nav li a {
   color: #fff;
   text-decoration: none;
-  padding: 2rem;
+  padding: 3vh;
   display: block;
   letter-spacing: 0.1rem;
-  font-size: 2rem;
   transition: all 0.4s;
+  font-size: 3rem;
+}
+
+@media screen and (min-width: 1024px) {
+  #global-nav li a {
+    font-size: 2rem;
+  }
 }
 
 #global-nav li a:hover {
@@ -226,6 +234,15 @@ td i {
   align-content: center;
 }
 
+.top-logo img {
+  width: 80vw;
+  margin: 10vh auto 0 auto;
+}
+
+.top-logo a:hover {
+  opacity: 100%;
+}
+
 .top-img {
   width: 80vw;
   margin: 10vh auto 0 auto;
@@ -237,6 +254,10 @@ td i {
 
 @media screen and (min-width: 480px) {
   .top-img img {
+    max-width: 80vw;
+  }
+
+  .top-logo img {
     max-width: 80vw;
   }
 
@@ -253,6 +274,11 @@ td i {
   .top-img img {
     width: auto;
     height: 70vh;
+  }
+
+  .top-logo img {
+    width: auto;
+    height: 40vh;
   }
 
   .scroll-arrow {
@@ -364,15 +390,15 @@ body.fadeout::after {
 }
 
 .btn.banner {
-  width: 80vw;
-  height: 30vh;
-  margin: 10vh auto;
-  background-color: blue;
-  font-size: 3rem;
+  width: 70vw;
+  height: 10vh;
+  margin: 4vh auto;
+  background-color: #333;
+  font-size: 2rem;
   letter-spacing: 0.8rem;
 }
 
-.btn.paper {
+.btn.small-btn {
   width: 5rem;
   height: 0.5rem;
   margin: 1rem auto;
@@ -392,11 +418,6 @@ body.fadeout::after {
   background-color: #333;
   border-radius: 5rem;
 }
-
-.link-box {
-  margin: 5vh auto;
-}
-
 /* -------------------- */
 /* section
 /* -------------------- */
@@ -430,7 +451,7 @@ body.fadeout::after {
   width: 30vw;
 }
 
-.section.align-center p {
+.align-center p {
   text-align: center;
 }
 
@@ -488,9 +509,15 @@ body.fadeout::after {
 
 .bigimg img {
   position: relative;
-  width: 60%;
-  max-width: 60vw;
+  max-width: 90vw;
   margin: 5vh auto 3vh auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .bigimg img {
+    width: 60%;
+    max-width: 60vw;
+  }
 }
 
 .close-btn {
@@ -600,17 +627,40 @@ body.fadeout::after {
   text-align: center;
 }
 
-.slider-ui {
+.slider-ul {
   width: 80%;
   height: auto;
   margin: 0 auto;
 }
 
-.slider-ui img {
+.slider-ul img {
   width: 100%;
   height: 100%;
   margin: 3vh auto;
   object-fit: cover;
+}
+
+.slider-ul.small-slider {
+  width: 40vw;
+}
+
+@media screen and (min-width: 480px) {
+  .slider-ul.small-slider {
+    width: 40vw;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .slider-ul.small-slider {
+    width: 20vw;
+  }
+}
+
+.slider-ul.small-slider img {
+  width: 100%;
+  height: 100%;
+  margin: 3vh auto;
+  padding: 0 1rem;
 }
 
 .slick-dots li button:before {
