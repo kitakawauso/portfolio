@@ -56,7 +56,7 @@
     <div class="top-wrapper">
       <div class="top-img">
         <a href="#portfolio_about"
-          ><img src="./img/suisho/topimg_suisho.jpg" alt="suishoのロゴ" />
+          ><img src="./img/portfolio/mylogo.png" alt="自分のロゴ" />
         </a>
       </div>
 
@@ -121,7 +121,7 @@
         <div class="lead">
           <p>
             先ほど作成したラフを元に、Figmaでプロトタイプを作成した。<br />
-            デスクトップでの環境を想定してmarginやpaddingなども考えながら作成したが、コーディング中にレスポンシブ対応での制作に切り替えた。<br />
+            デスクトップでの環境を想定してmarginやpaddingなども考えながら作成したが、コーディング中にレスポンシブ対応での制作に切り替えたため不要になった設定が多かった。<br />
           </p>
         </div>
 
@@ -149,6 +149,11 @@
           <p>
             できるだけシンプルで無駄のないデザインにし、コンテンツの中身が見やすいように心がけた。<br />
             他のページへ移動するためのメニューはコンパクトな実装が可能であるハンバーガーメニューを選んだ。<br />
+            また、プロトタイプ・本サイト共に、<a
+              href="https://fontawesome.com/"
+              target="_blank"
+              >font awesome</a
+            >のアイコンを用いた。<br />
           </p>
         </div>
       </div>
@@ -158,9 +163,8 @@
       <h1>Coding</h1>
       <div class="lead">
         <p>
-          プロトタイプではかなりシンプルなデザインを想定していたため、コーディングで不可能なデザインはなく、比較的スムーズにコーディングをすることができたと感じた。<br />
-          コーディングを意識しながらデザインを考えられたと思う。<br />
-          実際にコーディングに移ってからは、追加で必要だと考えられるものを付け足した。<br />
+          プロトタイプではコーディングを意識しながらシンプルなデザインを想定していたため、コーディングの技術面で不可能なデザインはなく、比較的スムーズにコーディングをすることができたと感じた。<br />
+          実際にコーディングに移ってからは、追加で必要だと考えられるものを付け足した。この要素については以下の通りである。<br />
         </p>
       </div>
 
@@ -190,17 +194,22 @@
 
         <div class="lead">
           <p>
-            suishoのUIを表示させる際、全部で4画面あるUIの画像を全て並べると冗長になってしまうと考えた。<br />
+            suishoのUIを表示させる際、全部で4画面あるUIの画像を全て並べると冗長になり比較しづらいと考えた。<br />
             そこで、スライダーを設置して横にスライドできるようにjQueryを用いて実装した。<br />
-            ユーザーがスライダーに気づかないことが想定されたので、自動でスライドさせた上に、現在何枚目かを示すドットを配置している。<br />
-            また、スマートフォンでのタッチ操作にも対応している。<br />
+            ユーザーがスライダーに気づかないことが想定されたので、自動でスライドするよう実装し、現在何枚目かを示すドットを配置している。<br />
+            また、スマートフォンでのスワイプにも対応している。<br />
           </p>
         </div>
       </div>
 
       <div class="section-box">
         <h2>image</h2>
-
+        <div class="lead">
+          <p>
+            imgタグに対してドロップシャドウを適用し、画像であることを強調した。<br />
+            当初はドロップシャドウを適用する予定はなかったが、画像の境界がわかりづらかったために追加で実装した。<br />
+          </p>
+        </div>
         <div class="dualpanel-wrapper">
           <div class="dualpanel-item">
             <a href="" class="modal-img"
@@ -224,12 +233,76 @@
 
         <div class="lead">
           <p>
-            imgタグに対してドロップシャドウを適用し、画像であることを強調した。<br />
-            当初はドロップシャドウを適用する予定はなかったが、画像の境界がわかりづらかったために追加で実装した。<br /><br />
-            また、拡大が必要そうな画像に対してはクリックしてモーダルを表示できるようにしている。<br />
-            モーダル表示の際には背景を暗くし、バツ印のボタン以外にも背景をクリックしてモーダルを閉じられるようにした。<br /><br />
+            また、拡大が必要な画像に対してはクリックしてモーダルを表示できるようにしている。<br />
+            モーダル表示の際には背景を暗くし、バツ印のボタン以外にも背景をクリックしてモーダルを閉じられるようにした。<br />
             そのほかにも、比較したい2枚の画像はデスクトップ上で2つ横並びにしているが、スマートフォンで見る際には縦並びになるようにしたりと小さな工夫を凝らしている。<br />
           </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="portfolio_logo" class="section">
+      <h1>Logo</h1>
+      <div class="section-box">
+        <h2>suisho</h2>
+        <div class="lead">
+          <p>
+            今回ポートフォリオサイトを作るにあたりUIも練り直したため、その際にsuishoのロゴも制作した。<br />
+          </p>
+        </div>
+        <a href="" class="modal-img"
+          ><img src="./img/portfolio/suishologo_rough.jpg" class="small-img"
+        /></a>
+
+        <div class="lead">
+          <p>
+            iPadでラフを描いた後、イラストレーターで実際のボーン表示の画像を見ながら複数のロゴを作成し、バランスが良いものを採用した。<br />
+          </p>
+        </div>
+        <a href="" class="modal-img"
+          ><img src="./img/portfolio/suishologo_draft.jpg" class="small-img"
+        /></a>
+
+        <div class="lead">
+          <p>
+            suishoというシステムの名前は、「自分自身の動きを映し出せる水晶のようなもの」という意味から採用した。<br />
+            水晶は眺めているだけでも楽しいと感じられることから、可視化画面を眺めて楽しむ時間を想像して水晶と名付けた。<br />
+          </p>
+        </div>
+      </div>
+
+      <div class="section-box">
+        <h2>my logo</h2>
+        <div class="lead">
+          <p>
+            本サイトのトップページなどに掲載しているロゴは、自分の名前を表している。<br />
+            それぞれ、「方角の北」「川」「リ」「サ」が内包されているロゴになっている。
+            高校の授業中に思いついて以来、気に入って使っている。<br />
+          </p>
+        </div>
+        <div class="slider-wrapper">
+          <ul class="slider-ul small-slider">
+            <li>
+              <a href="" class="modal-img"
+                ><img src="img/portfolio/logo/kita.png" alt="北"
+              /></a>
+            </li>
+            <li>
+              <a href="" class="modal-img"
+                ><img src="img/portfolio/logo/gawa.png" alt="川"
+              /></a>
+            </li>
+            <li>
+              <a href="" class="modal-img"
+                ><img src="img/portfolio/logo/ri.png" alt="リ"
+              /></a>
+            </li>
+            <li>
+              <a href="" class="modal-img"
+                ><img src="img/portfolio/logo/sa.png" alt="サ"
+              /></a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

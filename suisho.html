@@ -70,9 +70,14 @@
         <p>
           競技かるたの払いの動作を可視化するためのWebシステム。<br />
           「競技かるたの払いの動作の可視化」という題で大学4年次から卒業研究として制作開始。<br />
+        </p>
+        <p>
           競技者の競技能力の向上が目的である。<br />
-          機械学習を用いて姿勢推定を行い、得られた情報を可視化することで
-          選手の取りについて分析を行う。<br />
+          競技かるたでは、各選手の体格に合った構えを習得したり、払いを熟達させることが必須である。<br />
+          そのほかにも上達するために必要な要素はあるが、構えや払いは人の目で判断するよりも測定した数値の方が正確だろうという仮定から、構えや払いを測定することを考えた。<br />
+        </p>
+        <p>
+          機械学習を用いて姿勢推定を行い、得られた情報を可視化することで選手の取りについて分析を行う。<br />
           複数人の情報を用いて比較を行うことで、より詳細な分析ができる。<br />
         </p>
       </div>
@@ -111,7 +116,7 @@
             allowfullscreen
           ></iframe>
         </div>
-        <div class="movie-text">
+        <div class="movie-text" id="current_system">
           <p>
             前述のシステムで得られた情報を可視化するシステムの画面。<br />
             Javascriptを用いて描画している。三次元ボーン表示を行うことで、
@@ -120,12 +125,40 @@
           </p>
         </div>
       </div>
+
+      <a
+        href="https://kitakawauso.github.io/suisho/"
+        class="btn link"
+        target="_blank"
+        ><i class="fa-solid fa-arrow-up-right-from-square"></i>実際のシステム</a
+      >
+      <div class="lead align-center">
+        <p>
+          ※開発途中<br />
+          recording画面の右側「setting」を押すとカメラ映像から姿勢推定が行える。<br />
+          visualization画面では下記ボタンからダウンロードできる「player1.json」と「player2.json」が必要。<br />
+          file inputボタンよりそれぞれを読み込むことで、可視化ができる。<br />
+        </p>
+      </div>
+      <a
+        href="./suisho_jsondata.zip"
+        download=""
+        class="btn small-btn"
+        target="_blank"
+        ><i class="fa-solid fa-file-arrow-down"></i>jsondata</a
+      >
     </div>
 
     <div id="suisho_ux" class="section">
       <h1>User Experience</h1>
-      <div id="suisho_persona" class="section-box">
+      <div class="section-box">
         <h2>user persona</h2>
+        <div class="lead">
+          <p>
+            競技かるたを始めたばかりの選手をこのシステムのペルソナとして設定した。<br />
+            身長が低い選手は構えや払いを習得するのが難しく、測定による分析の必要性が高いと考えている。<br />
+          </p>
+        </div>
         <a href="" class="modal-img"
           ><img
             src="img/suisho/userpersona_suisho.jpg"
@@ -134,8 +167,13 @@
         /></a>
       </div>
 
-      <div id="suisho_cjmap" class="section-box">
+      <div class="section-box">
         <h2>customer journey map</h2>
+        <div class="lead">
+          <p>
+            このシステムを用いることで小柄な上級者はペルソナと比べて前傾姿勢で構えていることなどがわかり、その情報をもとに自身に合う構えを見つけていく、という流れを想定した。<br />
+          </p>
+        </div>
         <a href="" class="modal-img"
           ><img
             src="img/suisho/journeymap_suisho.jpg"
@@ -149,14 +187,15 @@
       <h1>User Interface</h1>
       <div class="lead">
         <p>
-          今後可視化手法の追加を検討しているため、システムのUIを一新する予定である。<br />
+          現状では操作方法が分かりづらく、また今後可視化手法の追加を検討しているため、システムのUIを一新する予定である。<br />
           未実装ではあるが、考案中の設計図を掲載する。<br />
+          現状でのシステムについては<a href="#current_system">こちら</a><br />
         </p>
       </div>
 
       <div class="section-box">
         <div class="slider-wrapper">
-          <ul class="slider-ui">
+          <ul class="slider-ul">
             <li>
               <a href="" class="modal-img"
                 ><img
@@ -239,7 +278,7 @@
         </p>
         <a
           href="https://proceedings-of-deim.github.io/DEIM2022/papers/C23-5.pdf"
-          class="btn paper"
+          class="btn small-btn"
           target="_blank"
           ><i class="fa-solid fa-file"></i>paper</a
         >
@@ -251,7 +290,7 @@
         <p><i class="fa-solid fa-award"></i>「学生奨励賞」　受賞</p>
         <a
           href="http://id.nii.ac.jp/1001/00219036/"
-          class="btn paper"
+          class="btn small-btn"
           target="_blank"
           ><i class="fa-solid fa-file"></i>paper</a
         >
@@ -261,7 +300,7 @@
         <p>2022.11.04~11.05</p>
         <p>NICOGRAPH 2022</p>
         <p>ショートペーパー投稿予定</p>
-        <a href="" class="btn paper btn-invalid" target="_blank"
+        <a href="" class="btn small-btn btn-invalid" target="_blank"
           ><i class="fa-solid fa-file"></i>paper</a
         >
       </div>

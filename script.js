@@ -64,7 +64,7 @@ $(function () {
 
 // slider
 $(function () {
-  $(".slider-ui").slick({
+  $(".slider-ul").slick({
     autoplay: true,
     autoplaySpeed: 2000,
     speed: 800,
