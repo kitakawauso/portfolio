@@ -40,6 +40,11 @@ $("#global-nav a").click(function () {
   $("#global-nav").removeClass("panel-active");
 });
 
+$("#global-nav").click(function () {
+  $(".open-btn").removeClass("active");
+  $("#global-nav").removeClass("panel-active");
+});
+
 // modal
 $(function () {
   $(".section .modal-img").click(function () {

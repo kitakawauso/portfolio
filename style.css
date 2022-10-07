@@ -85,6 +85,7 @@ a:hover {
 }
 
 p {
+  font-size: 120%;
   text-align: left;
 }
 
@@ -149,11 +150,17 @@ td i {
 #global-nav li a {
   color: #fff;
   text-decoration: none;
-  padding: 2rem;
+  padding: 3rem;
   display: block;
   letter-spacing: 0.1rem;
-  font-size: 2rem;
   transition: all 0.4s;
+  font-size: 3rem;
+}
+
+@media screen and (min-width: 1024px) {
+  #global-nav li a {
+    font-size: 2rem;
+  }
 }
 
 #global-nav li a:hover {
@@ -488,9 +495,15 @@ body.fadeout::after {
 
 .bigimg img {
   position: relative;
-  width: 60%;
-  max-width: 60vw;
+  max-width: 90vw;
   margin: 5vh auto 3vh auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .bigimg img {
+    width: 60%;
+    max-width: 60vw;
+  }
 }
 
 .close-btn {
