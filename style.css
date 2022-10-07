@@ -102,6 +102,18 @@ i {
   margin-right: 1rem;
 }
 
+table {
+  margin: 5vh auto;
+}
+
+td {
+  padding: 0.2rem 1rem;
+}
+
+td i {
+  margin: 0;
+}
+
 /* -------------------- */
 /* global navigation
 /* -------------------- */
@@ -255,10 +267,6 @@ i {
     content: "";
     display: inline-block;
     margin: auto;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
     transform: rotate(-45deg);
     width: 2vw;
     height: 2vw;
@@ -427,7 +435,7 @@ body.fadeout::after {
 }
 
 .section-box {
-  margin: 8vh 0;
+  margin: 6vh 0 8vh 0;
 }
 
 @media screen and (min-width: 1024px) {
@@ -436,6 +444,25 @@ body.fadeout::after {
     padding: 0 5vw;
     width: 50vw;
   }
+}
+
+.lead a {
+  border-bottom: 1px dotted #333;
+  padding-bottom: 0.1em;
+}
+
+.icon-box a {
+  border: none;
+}
+
+.icon-box a:hover {
+  opacity: 100%;
+}
+
+.icon-box img {
+  width: auto;
+  height: 3rem;
+  margin: 5vh 1rem 0 0;
 }
 
 /* -------------------- */
@@ -637,4 +664,10 @@ body.fadeout::after {
 
 .instagram {
   margin: 5vh 0;
+}
+
+.myprofile-img {
+  width: 20vw;
+  max-width: 400px;
+  border-radius: 50%;
 }
