@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <title>北川リサ | Portfolio</title>
+    <link rel="icon" href="img/favicon.ico" />
+
     <link href="./style.css" rel="stylesheet" type="text/css" media="all" />
     <!-- slick -->
     <link rel="stylesheet" href="./libs/slick.css" />
@@ -27,7 +29,7 @@
 
     <div class="open-btn"><span></span><span></span><span></span></div>
     <nav id="global-nav">
-      <ul class="header-list">
+      <ul>
         <li>
           <a href="./index.html">TOP</a>
         </li>
@@ -64,18 +66,35 @@
       </ul>
     </nav>
 
+    <nav id="left-nav">
+      <ul>
+        <li>
+          <a href="#suisho_about" class="left-link">Abstract</a>
+        </li>
+        <li>
+          <a href="#suisho_ux" class="left-link">UX</a>
+        </li>
+        <li>
+          <a href="#suisho_ui" class="left-link">UI</a>
+        </li>
+        <li>
+          <a href="#suisho_conference" class="left-link">Conference</a>
+        </li>
+      </ul>
+    </nav>
+
     <div class="top-wrapper">
       <div class="top-img">
-        <a href="#suisho_abstract"
+        <a href="#suisho_about"
           ><img src="img/suisho/topimg_suisho.jpg" alt="suishoのロゴ"
         /></a>
       </div>
 
-      <a href="#suisho_abstract" class="scroll-arrow"></a>
+      <a href="#suisho_about" class="scroll-arrow"></a>
     </div>
 
-    <div id="suisho_abstract" class="section">
-      <h1>Abstract</h1>
+    <div id="suisho_about" class="section sec-scroll-point">
+      <h1 class="section-title">Abstract</h1>
 
       <div class="section-box">
         <div class="lead">
@@ -148,7 +167,7 @@
 
       <a
         href="https://kitakawauso.github.io/suisho/"
-        class="btn link"
+        class="btn brack-btn"
         target="_blank"
         ><i class="fa-solid fa-arrow-up-right-from-square"></i>実際のシステム</a
       >
@@ -169,8 +188,8 @@
       >
     </div>
 
-    <div id="suisho_ux" class="section">
-      <h1>User Experience</h1>
+    <div id="suisho_ux" class="section sec-scroll-point">
+      <h1 class="section-title">User Experience</h1>
       <div class="section-box">
         <h2>user persona</h2>
         <div class="lead">
@@ -203,8 +222,8 @@
       </div>
     </div>
 
-    <div id="suisho_ui" class="section">
-      <h1>User Interface</h1>
+    <div id="suisho_ui" class="section sec-scroll-point">
+      <h1 class="section-title">User Interface</h1>
       <div class="lead">
         <p>
           現状では操作方法が分かりづらく、また今後可視化手法の追加を検討しているため、システムのUIを一新する予定である。<br />
@@ -287,8 +306,8 @@
       </div>
     </div>
 
-    <div id="suisho_conference" class="section align-center">
-      <h1>Conference</h1>
+    <div id="suisho_conference" class="section align-center sec-scroll-point">
+      <h1 class="section-title">Conference</h1>
       <div class="section-box">
         <p>2022.02.27~03.02</p>
         <p>DEIM 2022 (第14回データ工学と情報マネジメントに関するフォーラム)</p>

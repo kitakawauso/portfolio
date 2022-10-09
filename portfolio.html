@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <title>北川リサ | Portfolio</title>
+    <link rel="icon" href="img/favicon.ico" />
+
     <link href="./style.css" rel="stylesheet" type="text/css" media="all" />
     <!-- slick -->
     <link rel="stylesheet" href="./libs/slick.css" />
@@ -27,7 +29,7 @@
 
     <div class="open-btn"><span></span><span></span><span></span></div>
     <nav id="global-nav">
-      <ul class="header-list">
+      <ul>
         <li>
           <a href="./index.html">TOP</a>
         </li>
@@ -64,6 +66,23 @@
       </ul>
     </nav>
 
+    <nav id="left-nav">
+      <ul>
+        <li>
+          <a href="#portfolio_about" class="left-link">About</a>
+        </li>
+        <li>
+          <a href="#portfolio_ux" class="left-link">UX</a>
+        </li>
+        <li>
+          <a href="#portfolio_ui" class="left-link">UI</a>
+        </li>
+        <li>
+          <a href="#portfolio_coding" class="left-link">Coding</a>
+        </li>
+      </ul>
+    </nav>
+
     <div class="top-wrapper">
       <div class="top-img">
         <a href="#portfolio_about"
@@ -74,8 +93,8 @@
       <a href="#portfolio_about" class="scroll-arrow"></a>
     </div>
 
-    <div id="portfolio_about" class="section">
-      <h1>About</h1>
+    <div id="portfolio_about" class="section sec-scroll-point">
+      <h1 class="section-title">About</h1>
 
       <div class="lead">
         <p>
@@ -86,8 +105,8 @@
       </div>
     </div>
 
-    <div id="portfolio_ux" class="section">
-      <h1>User Experience</h1>
+    <div id="portfolio_ux" class="section sec-scroll-point">
+      <h1 class="section-title">User Experience</h1>
       <div class="lead">
         <p>
           企業の新卒採用担当をペルソナとして想定した。<br />
@@ -103,8 +122,8 @@
       /></a>
     </div>
 
-    <div id="portfolio_ui" class="section">
-      <h1>User Interface</h1>
+    <div id="portfolio_ui" class="section sec-scroll-point">
+      <h1 class="section-title">User Interface</h1>
 
       <div class="section-box">
         <h2>rough</h2>
@@ -170,8 +189,8 @@
       </div>
     </div>
 
-    <div id="portfolio_coding" class="section">
-      <h1>Coding</h1>
+    <div id="portfolio_coding" class="section sec-scroll-point">
+      <h1 class="section-title">Coding</h1>
       <div class="lead">
         <p>
           プロトタイプではコーディングを意識しながらシンプルなデザインを想定していたため、コーディングの技術面で不可能なデザインはなく、比較的スムーズにコーディングをすることができたと感じた。<br />
@@ -190,7 +209,7 @@
 
         <div class="lead">
           <p>
-            suishoやポートフォリオサイトを紹介するページではトップに大きくロゴを表示するというデザインであるため、ユーザーがスクロールをしなければならないことに気づかない場合が想定された。<br />
+            ページごとに関連するアイキャッチ画像をトップに大きく表示するというデザインであるため、ユーザーがスクロールをしなければならないことに気づかない場合が想定された。<br />
             そのため、トップの画像の下にスクロールを促す記号を表示させている。<br />
             この記号やトップの画像をクリックすることでも直下のコンテンツに自動スクロールできるようにした。<br />
             また、この実装に伴い記号をクリックしたときにゆっくりスクロールするようなアニメーションもjQueryで実装している。<br />
@@ -250,70 +269,21 @@
           </p>
         </div>
       </div>
-    </div>
-
-    <div id="portfolio_logo" class="section">
-      <h1>Logo</h1>
-      <div class="section-box">
-        <h2>suisho</h2>
-        <div class="lead">
-          <p>
-            今回ポートフォリオサイトを作るにあたりUIも練り直したため、その際にsuishoのロゴも制作した。<br />
-          </p>
-        </div>
-        <a href="" class="modal-img"
-          ><img src="./img/portfolio/suishologo_rough.jpg" class="small-img"
-        /></a>
-
-        <div class="lead">
-          <p>
-            iPadでラフを描いた後、イラストレーターで実際のボーン表示の画像を見ながら複数のロゴを作成し、バランスが良いものを採用した。<br />
-          </p>
-        </div>
-        <a href="" class="modal-img"
-          ><img src="./img/portfolio/suishologo_draft.jpg" class="small-img"
-        /></a>
-
-        <div class="lead">
-          <p>
-            suishoというシステムの名前は、「自分自身の動きを映し出せる水晶のようなもの」という意味から採用した。<br />
-            水晶は眺めているだけでも楽しいと感じられることから、可視化画面を眺めて楽しむ時間を想像して水晶と名付けた。<br />
-          </p>
-        </div>
-      </div>
 
       <div class="section-box">
-        <h2>my logo</h2>
+        <h2>navigation</h2>
+        <img
+          src="img/portfolio/navigation_portfolio.png"
+          alt="画面左に設置したナビゲーション"
+          class="low-img"
+        />
         <div class="lead">
           <p>
-            本サイトのトップページなどに掲載しているロゴは、自分の名前を表している。<br />
-            それぞれ、「方角の北」「川」「リ」「サ」が内包されているロゴになっている。
-            高校の授業中に思いついて以来、気に入って使っている。<br />
+            デスクトップで閲覧している場合には、ページの中での現在位置を表すナビゲーションを画面左側に設置した。<br />
+            ユーザーが今何を見ているのか迷わないようにするだけでなく、見出しの役割も果たしている。<br />
+            これによりページがあとどのくらいあるのかが分かりやすくなり、見たい内容にすぐ飛ぶことができる。<br />
+            スマートフォンで閲覧している場合は画面の要素が増えすぎてしまうことを避けるため、非表示にしている。<br />
           </p>
-        </div>
-        <div class="slider-wrapper">
-          <ul class="slider-ul small-slider">
-            <li>
-              <a href="" class="modal-img"
-                ><img src="img/portfolio/logo/kita.png" alt="北"
-              /></a>
-            </li>
-            <li>
-              <a href="" class="modal-img"
-                ><img src="img/portfolio/logo/gawa.png" alt="川"
-              /></a>
-            </li>
-            <li>
-              <a href="" class="modal-img"
-                ><img src="img/portfolio/logo/ri.png" alt="リ"
-              /></a>
-            </li>
-            <li>
-              <a href="" class="modal-img"
-                ><img src="img/portfolio/logo/sa.png" alt="サ"
-              /></a>
-            </li>
-          </ul>
         </div>
       </div>
     </div>

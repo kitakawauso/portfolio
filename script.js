@@ -29,6 +29,40 @@ $(function () {
   });
 });
 
+// div fade-in
+$(function () {
+  $(window).scroll(function () {
+    const windowHeight = $(window).height();
+    const scroll = $(window).scrollTop();
+
+    $(".section").each(function () {
+      const targetPosition = $(this).offset().top;
+      if (scroll > targetPosition - windowHeight + 100) {
+        $(this).addClass("is-fadein");
+      }
+    });
+  });
+});
+
+// left navigation
+$(function () {
+  $(window).on("load scroll resize", function () {
+    var st = $(window).scrollTop();
+    var wh = $(window).height();
+
+    $(".sec-scroll-point").each(function (i) {
+      var tg = $(this).offset().top;
+      var id = $(this).attr("id");
+
+      if (st > tg - wh + wh / 2) {
+        $(".left-link").removeClass("is-active");
+        var link = $(".left-link[href *= " + id + "]");
+        $(link).addClass("is-active");
+      }
+    });
+  });
+});
+
 // global navigation
 $(".open-btn").click(function () {
   $(this).toggleClass("active");
