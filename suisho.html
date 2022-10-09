@@ -19,6 +19,12 @@
   </head>
 
   <body class="fadeout">
+    <header class="header">
+      <div class="top-icon">
+        <a href="./index.html"><img src="./img/portfolio/mylogo.png" /></a>
+      </div>
+    </header>
+
     <div class="open-btn"><span></span><span></span><span></span></div>
     <nav id="global-nav">
       <ul class="header-list">
@@ -41,7 +47,11 @@
             ><i class="fa-solid fa-chevron-right"></i>this site</a
           >
         </li>
-
+        <li>
+          <a href="./graphics.html"
+            ><i class="fa-solid fa-chevron-right"></i>graphics</a
+          >
+        </li>
         <li>
           <a href="./aboutme.html">ABOUT ME</a>
         </li>
@@ -67,63 +77,72 @@
     <div id="suisho_abstract" class="section">
       <h1>Abstract</h1>
 
-      <div class="lead">
-        <p>
-          競技かるたの払いの動作を可視化するためのWebシステム。<br />
-          「競技かるたの払いの動作の可視化」という題で大学4年次から卒業研究として制作開始。<br />
-        </p>
-        <p>
-          競技者の競技能力の向上が目的である。<br />
-          競技かるたでは、各選手の体格に合った構えを習得したり、払いを熟達させることが必須である。<br />
-          そのほかにも上達するために必要な要素はあるが、構えや払いは人の目で判断するよりも測定した数値の方が正確だろうという仮定から、構えや払いを測定することを考えた。<br />
-        </p>
-        <p>
-          機械学習を用いて姿勢推定を行い、得られた情報を可視化することで選手の取りについて分析を行う。<br />
-          複数人の情報を用いて比較を行うことで、より詳細な分析ができる。<br />
-        </p>
-      </div>
-
-      <div class="movie-box flex-box">
-        <div class="movie-wrapper">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/O8tOCe2wGwE"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <div class="movie-text">
+      <div class="section-box">
+        <div class="lead">
           <p>
-            札を払っている様子を撮影し、 姿勢推定をするためのシステムの画面。<br />
-            機械学習による姿勢推定は、特別な撮影用機械を用いなくとも分析を行えることが強みである。
-            <br />
-            Mediapipeを用いており、指先も含めた33箇所の部位の座標を細かく測定できる。<br />
+            競技かるたの払いの動作を可視化するためのWebシステム。<br />
+            「競技かるたの払いの動作の可視化」という題で大学4年次から卒業研究として制作開始。<br />
+          </p>
+          <p>
+            競技者の競技能力の向上が目的である。<br />
+            競技かるたでは、各選手の体格に合った構えを習得したり、払いを熟達させることが必須である。<br />
+            そのほかにも上達するために必要な要素はあるが、構えや払いは人の目で判断するよりも測定した数値の方が正確だろうという仮定から、構えや払いを測定することを考えた。<br />
+          </p>
+          <p>
+            機械学習を用いて姿勢推定を行い、得られた情報を可視化することで選手の取りについて分析を行う。<br />
+            複数人の情報を用いて比較を行うことで、より詳細な分析ができる。<br />
           </p>
         </div>
       </div>
 
-      <div class="movie-box flex-box">
-        <div class="movie-wrapper">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/PMGpq248DTs"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+      <div class="section-box">
+        <h2>recoding system</h2>
+        <div class="movie-box flex-box">
+          <div class="movie-wrapper">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/O8tOCe2wGwE"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="movie-text">
+            <p>
+              札を払っている様子を撮影し、
+              姿勢推定をするためのシステムの画面。<br />
+              機械学習による姿勢推定は、特別な撮影用機械を用いなくとも分析を行えることが強みである。
+              <br />
+              Mediapipeを用いており、指先も含めた33箇所の部位の座標を細かく測定できる。<br />
+            </p>
+          </div>
         </div>
-        <div class="movie-text" id="current_system">
-          <p>
-            前述のシステムで得られた情報を可視化するシステムの画面。<br />
-            Javascriptを用いて描画している。三次元ボーン表示を行うことで、
-            通常は見られない任意の角度で払いの様子を観察できる。<br />
-            グラフ表示でも比較をすることで、より詳細な分析ができる。<br />
-          </p>
+      </div>
+
+      <div class="section-box">
+        <h2>visualization system</h2>
+        <div class="movie-box flex-box">
+          <div class="movie-wrapper">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/PMGpq248DTs"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="movie-text" id="current_system">
+            <p>
+              前述のシステムで得られた情報を可視化するシステムの画面。<br />
+              Javascriptを用いて描画している。三次元ボーン表示を行うことで、
+              通常は見られない任意の角度で払いの様子を観察できる。<br />
+              グラフ表示でも比較をすることで、より詳細な分析ができる。<br />
+            </p>
+          </div>
         </div>
       </div>
 

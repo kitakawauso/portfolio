@@ -65,8 +65,9 @@ h6 {
 body {
   font-family: "Roboto", "Noto Sans JP", sans-serif;
   text-align: center;
-  line-height: 2rem;
+  line-height: 280%;
   letter-spacing: 0.12rem;
+  -webkit-text-size-adjust: 100%;
 }
 
 li {
@@ -85,14 +86,24 @@ a:hover {
 }
 
 p {
-  font-size: 110%;
+  font-size: 1.2rem;
   text-align: left;
+}
+
+.highlight {
+  background: linear-gradient(transparent 80%, #ffc20e 60%);
+  font-weight: 600;
 }
 
 h1 {
   font-size: 2rem;
-  margin: 2rem 0;
-  letter-spacing: 0.36rem;
+  padding: 2rem 0;
+  letter-spacing: 0.5rem;
+}
+
+h2 {
+  padding: 1rem 0;
+  letter-spacing: 0.3rem;
 }
 
 img {
@@ -114,6 +125,32 @@ td {
 td i {
   margin: 0;
   color: #ffc20e;
+}
+
+/* -------------------- */
+/* global navigation
+/* -------------------- */
+
+.top-icon {
+  width: 10vw;
+  position: fixed;
+  z-index: 999;
+  top: 20px;
+  left: 30px;
+}
+
+.top-icon a img {
+  width: 10vw;
+  height: auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .top-icon {
+    width: 5vw;
+  }
+  .top-icon a img {
+    width: 5vw;
+  }
 }
 
 /* -------------------- */
@@ -174,8 +211,8 @@ td i {
   top: 20px;
   right: 20px;
   cursor: pointer;
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
   transition: all 0.4s;
 }
 
@@ -199,15 +236,15 @@ td i {
 }
 
 .open-btn span:nth-of-type(2) {
-  top: 25px;
+  top: 28px;
 }
 
 .open-btn span:nth-of-type(3) {
-  top: 35px;
+  top: 41px;
 }
 
 .open-btn.active span:nth-of-type(1) {
-  top: 18px;
+  top: 23px;
   left: 18px;
   transform: translateY(6px) rotate(-45deg);
   width: 50%;
@@ -219,7 +256,7 @@ td i {
 }
 
 .open-btn.active span:nth-of-type(3) {
-  top: 30px;
+  top: 35px;
   left: 18px;
   transform: translateY(-6px) rotate(45deg);
   width: 50%;
@@ -389,15 +426,6 @@ body.fadeout::after {
   color: #fff;
 }
 
-.btn.banner {
-  width: 70vw;
-  height: 10vh;
-  margin: 4vh auto;
-  background-color: #333;
-  font-size: 2rem;
-  letter-spacing: 0.8rem;
-}
-
 .btn.small-btn {
   width: 5rem;
   height: 0.5rem;
@@ -418,6 +446,30 @@ body.fadeout::after {
   background-color: #333;
   border-radius: 5rem;
 }
+
+/* div link */
+
+.div-link {
+  position: relative;
+  border-radius: 1rem;
+  box-shadow: 1px 3px 5px 1px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s;
+}
+
+.div-link:hover {
+  transform: translateY(4px);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.div-link .link {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /* -------------------- */
 /* section
 /* -------------------- */
@@ -570,6 +622,73 @@ body.fadeout::after {
 }
 
 /* -------------------- */
+/* banner box
+/* -------------------- */
+
+.works-wrapper h1 {
+  margin-bottom: 5vh;
+}
+
+.banner-wrapper {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.banner-box {
+  width: 100%;
+  height: 40vh;
+  margin: 5vh auto;
+}
+
+.banner-img {
+  width: 100%;
+  height: 50%;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-img img {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.banner-caption {
+  width: 100%;
+  height: 30%;
+}
+
+.banner-caption h2 {
+  margin: 1rem 1rem 0 1rem;
+}
+
+.banner-caption p {
+  font-size: 1rem;
+  line-height: 150%;
+  margin: 0 1rem 2rem 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .banner-wrapper {
+    display: flex;
+  }
+
+  .banner-box {
+    width: 22%;
+    height: 50vh;
+    margin: 3vh auto;
+  }
+
+  .banner-img {
+    width: 100%;
+    height: 40%;
+  }
+}
+
+/* -------------------- */
 /* movie box
 /* -------------------- */
 
@@ -679,33 +798,13 @@ body.fadeout::after {
 /* vis system
 /* -------------------- */
 
-@media screen and (min-width: 480px) {
-  .dualpanel-wrapper {
-    width: 80vw;
-    margin-bottom: 5vh;
-  }
-
-  .dualpanel-item img {
-    width: 100%;
-  }
+.dualpanel-item {
+  max-width: 30vw;
+  margin: 0 2rem;
 }
 
-@media screen and (min-width: 1024px) {
-  .dualpanel-wrapper {
-    width: 80vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .dualpanel-item {
-    max-width: 30vw;
-    margin: 0 2rem;
-  }
-
-  .dualpanel-item img {
-    width: 100%;
-  }
+.dualpanel-item img {
+  width: 100%;
 }
 
 .scroll-img {
@@ -728,4 +827,24 @@ body.fadeout::after {
   width: 20vw;
   max-width: 400px;
   border-radius: 50%;
+}
+
+@media screen and (min-width: 480px) {
+  .dualpanel-wrapper {
+    width: 80vw;
+    margin-bottom: 5vh;
+  }
+
+  .dualpanel-item img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .dualpanel-wrapper {
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
